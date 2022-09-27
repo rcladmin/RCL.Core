@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<AddRazorSupportForMvc>true</AddRazorSupportForMvc>
+		<Title>RCL Core Identity Proofing UI</Title>
+		<Description>A UI to manage user approval for RCL Identity Proofing</Description>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<FrameworkReference Include="Microsoft.AspNetCore.App" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\RCL.Core.Identity.Graph\RCL.Core.Identity.Graph.csproj" />
+	  <ProjectReference Include="..\RCL.Core.Identity.Proofing\RCL.Core.Identity.Proofing.csproj" />
+	</ItemGroup>
+
+</Project>

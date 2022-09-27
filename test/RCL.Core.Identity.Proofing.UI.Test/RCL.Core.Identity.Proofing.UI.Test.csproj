@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>aspnet-RCL.Core.Identity.Proofing.UI.Test-1901D1BE-E1AE-44D5-9022-0190C1154CF5</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Identity.Web" />
+    <PackageReference Include="Microsoft.Identity.Web.UI" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\RCL.Core.Identity.Proofing.UI\RCL.Core.Identity.Proofing.UI.csproj" />
+    <ProjectReference Include="..\..\src\RCL.Core.Identity.Tools\RCL.Core.Identity.Tools.csproj" />
+  </ItemGroup>
+
+</Project>
