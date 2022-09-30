@@ -14,7 +14,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\RCL.Core.Authorization\RCL.Core.Authorization.csproj" />
+	  <ProjectReference Include="..\..\RCL.Common\RCL.Core.Authorization\RCL.Core.Authorization.csproj" />
 	</ItemGroup>
 
 </Project>

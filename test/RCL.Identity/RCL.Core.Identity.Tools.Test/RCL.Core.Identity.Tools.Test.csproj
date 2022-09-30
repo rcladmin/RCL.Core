@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\RCL.Core.Identity.Tools\RCL.Core.Identity.Tools.csproj" />
+    <ProjectReference Include="..\..\..\src\RCL.Identity\RCL.Core.Identity.Tools\RCL.Core.Identity.Tools.csproj" />
   </ItemGroup>
 
 </Project>

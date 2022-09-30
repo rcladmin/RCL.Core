@@ -1,0 +1,58 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 mb-2">
+                <div class="card shadow rounded">
+                    <div class="card-header">
+                        <h2 class="display-4"> Digital Identity </h2>
+                    </div>
+                    <div class="card-body">
+                        <p class="lead">A secure way to verify who you are online</p>
+                        <div class="alert alert-info">
+                            <p><i class="bi bi-info-circle"></i> To register for a Digital ID, click the <strong>Sign up now</strong> link at the bottom of the Sign in page</p>
+                            <p><a class="btn btn-primary" asp-area="MicrosoftIdentity" asp-controller="Account" asp-action="SignIn">Register  <i class="bi bi-pencil-square"></i></a></p>
+                        </div>
+                        <div class="alert alert-secondary">
+                            <p><i class="bi bi-info-circle"></i> If you have an approved Digital ID, sign in here</p>
+                            <p><a class="btn btn-success" asp-area="MicrosoftIdentity" asp-controller="Account" asp-action="SignIn">Sign In  <i class="bi bi-arrow-up-right-circle"></i></a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="card shadow rounded">
+                    <div class="card-header">
+                        <h2>How it works</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-lg-8">
+                                <div class="mt-3">
+                                    <ul>
+                                        <li><a asp-area="MicrosoftIdentity" asp-controller="Account" asp-action="SignIn">Register</a> for a Digital ID</li>
+                                        <li>Send us selfies with photo IDs to verify your identity</li>
+                                        <li>An approver will contact you when the verification process is complete</li>
+                                    </ul>
+                                    <p><a asp-page="./Instructions" class="btn btn-secondary ms-4">Learn More <i class="bi bi-arrow-right-circle"></i></a></p>
+                                    <p class="mt-5">
+                                        If you need assistance, contact support at : <a href="mailto: @Model.ContactEmail">@Model.ContactEmail</a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <img height="100" src="~/images/selfie.jpg" />
+                                <p><small>Sample selfie photo</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -13,7 +13,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\RCL.Core.Api.RequestService\RCL.Core.Api.RequestService.csproj" />
+	  <ProjectReference Include="..\..\RCL.Common\RCL.Core.Api.RequestService\RCL.Core.Api.RequestService.csproj" />
 	</ItemGroup>
 
 </Project>

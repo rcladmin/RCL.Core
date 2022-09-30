@@ -21,7 +21,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\..\src\RCL.Core.Identity.Graph\RCL.Core.Identity.Graph.csproj" />
+		<ProjectReference Include="..\..\..\src\RCL.Identity\RCL.Core.Identity.Graph\RCL.Core.Identity.Graph.csproj" />
 	</ItemGroup>
 
 </Project>

@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>59a8261f-5a7c-462c-b4b1-4e5b6184d874</UserSecretsId>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Version>6.1.0</Version>
+    <Authors>Anil Ripla</Authors>
+    <Company>Ray Consulting Limited</Company>
+    <Description>A web application for users to enroll for a Digital Identity</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Identity.Web" />
+    <PackageReference Include="Microsoft.Identity.Web.UI" />
+
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\RCL.Core.Identity.Tools\RCL.Core.Identity.Tools.csproj" />
+  </ItemGroup>
+
+</Project>

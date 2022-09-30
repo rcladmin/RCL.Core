@@ -21,7 +21,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\..\src\RCL.Core.Identity.Proofing\RCL.Core.Identity.Proofing.csproj" />
+		<ProjectReference Include="..\..\..\src\RCL.Identity\RCL.Core.Identity.Proofing\RCL.Core.Identity.Proofing.csproj" />
 	</ItemGroup>
 
 </Project>
