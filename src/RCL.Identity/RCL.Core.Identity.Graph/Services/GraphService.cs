@@ -52,6 +52,10 @@ namespace RCL.Core.Identity.Graph
                     {
                         e.GivenName,
                         e.Surname,
+                        e.StreetAddress,
+                        e.City,
+                        e.State,
+                        e.PostalCode,
                         e.Country,
                         e.UserPrincipalName,
                         e.DisplayName,
@@ -78,6 +82,10 @@ namespace RCL.Core.Identity.Graph
                     {
                         e.GivenName,
                         e.Surname,
+                        e.StreetAddress,
+                        e.City,
+                        e.State,
+                        e.PostalCode,
                         e.Country,
                         e.UserPrincipalName,
                         e.DisplayName,

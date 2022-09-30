@@ -17,6 +17,10 @@ namespace RCL.Core.Identity.Proofing
                 GivenName = userData.GivenName,
                 Surname = userData.SurName,
                 DisplayName = userData.DisplayName,
+                StreetAddress = userData.StreetAddress,
+                City = userData.City,
+                State = userData.StateProvince,
+                PostalCode = userData.PostalCode,
                 Country = userData.Country,
                 Identities = new List<ObjectIdentity>()
                 {

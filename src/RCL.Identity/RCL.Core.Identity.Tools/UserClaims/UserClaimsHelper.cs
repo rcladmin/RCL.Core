@@ -32,6 +32,30 @@ namespace RCL.Core.Identity.Tools
                 userClaimsData.Email = email;
             }
 
+            string streetAddress = User.Claims.FirstOrDefault(c => c.Type == "emails")?.Value ?? string.Empty;
+            if (!string.IsNullOrEmpty(email))
+            {
+                userClaimsData.StreetAddress = streetAddress;
+            }
+
+            string city = User.Claims.FirstOrDefault(c => c.Type == "emails")?.Value ?? string.Empty;
+            if (!string.IsNullOrEmpty(email))
+            {
+                userClaimsData.City = city;
+            }
+
+            string state = User.Claims.FirstOrDefault(c => c.Type == "emails")?.Value ?? string.Empty;
+            if (!string.IsNullOrEmpty(email))
+            {
+                userClaimsData.State = state;
+            }
+
+            string postalCode = User.Claims.FirstOrDefault(c => c.Type == "emails")?.Value ?? string.Empty;
+            if (!string.IsNullOrEmpty(email))
+            {
+                userClaimsData.PostalCode = postalCode;
+            }
+
             string country = User.Claims.FirstOrDefault(c => c.Type == "country")?.Value ?? string.Empty;
             if (!string.IsNullOrEmpty(country))
             {

@@ -3,31 +3,31 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32901.215
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RCL.Core.Authorization", "src\RCL.Core.Authorization\RCL.Core.Authorization.csproj", "{85FBAE82-8512-4D43-9AA8-B49BB807E47E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RCL.Core.Authorization", "src\RCL.Common\RCL.Core.Authorization\RCL.Core.Authorization.csproj", "{85FBAE82-8512-4D43-9AA8-B49BB807E47E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RCL.Core.Authorization.Test", "test\RCL.Core.Authorization.Test\RCL.Core.Authorization.Test.csproj", "{FB01DA6B-8836-4239-BB4B-E1F5EAF593F2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RCL.Core.Authorization.Test", "test\RCL.Common\RCL.Core.Authorization.Test\RCL.Core.Authorization.Test.csproj", "{FB01DA6B-8836-4239-BB4B-E1F5EAF593F2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RCL.Core.Api.Authorization", "src\RCL.Core.Api.Authorization\RCL.Core.Api.Authorization.csproj", "{55BAA980-2EC4-458E-9235-6B6C0F445BA1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RCL.Core.Api.Authorization", "src\RCL.Common\RCL.Core.Api.Authorization\RCL.Core.Api.Authorization.csproj", "{55BAA980-2EC4-458E-9235-6B6C0F445BA1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RCL.Core.Api.RequestService", "src\RCL.Core.Api.RequestService\RCL.Core.Api.RequestService.csproj", "{E0F14032-47B7-476A-B468-39D784A1CF9C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RCL.Core.Api.RequestService", "src\RCL.Common\RCL.Core.Api.RequestService\RCL.Core.Api.RequestService.csproj", "{E0F14032-47B7-476A-B468-39D784A1CF9C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RCL.Core.Api.RequestService.Test", "test\RCL.Core.Api.RequestService.Test\RCL.Core.Api.RequestService.Test.csproj", "{ACA708F9-E3CE-4BCA-992B-8B9513759EF6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RCL.Core.Api.RequestService.Test", "test\RCL.Common\RCL.Core.Api.RequestService.Test\RCL.Core.Api.RequestService.Test.csproj", "{ACA708F9-E3CE-4BCA-992B-8B9513759EF6}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RCL.Core.Identity.Graph", "src\RCL.Core.Identity.Graph\RCL.Core.Identity.Graph.csproj", "{14316809-0E9D-4823-936C-D57B0D0B5AB1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RCL.Core.Identity.Graph", "src\RCL.Identity\RCL.Core.Identity.Graph\RCL.Core.Identity.Graph.csproj", "{14316809-0E9D-4823-936C-D57B0D0B5AB1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RCL.Core.Identity.Graph.Test", "test\RCL.Core.Identity.Graph.Test\RCL.Core.Identity.Graph.Test.csproj", "{75C1EE1E-04EC-4758-8215-D124FA2E41E2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RCL.Core.Identity.Graph.Test", "test\RCL.Identity\RCL.Core.Identity.Graph.Test\RCL.Core.Identity.Graph.Test.csproj", "{75C1EE1E-04EC-4758-8215-D124FA2E41E2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RCL.Core.Identity.Proofing", "src\RCL.Core.Identity.Proofing\RCL.Core.Identity.Proofing.csproj", "{5540B46E-F5E0-4165-B06E-DD51CA7E5218}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RCL.Core.Identity.Proofing", "src\RCL.Identity\RCL.Core.Identity.Proofing\RCL.Core.Identity.Proofing.csproj", "{5540B46E-F5E0-4165-B06E-DD51CA7E5218}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RCL.Core.Identity.Proofing.Test", "test\RCL.Core.Identity.Proofing.Test\RCL.Core.Identity.Proofing.Test.csproj", "{C4104463-788F-4D40-8CCF-D965822E7D25}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RCL.Core.Identity.Proofing.Test", "test\RCL.Identity\RCL.Core.Identity.Proofing.Test\RCL.Core.Identity.Proofing.Test.csproj", "{C4104463-788F-4D40-8CCF-D965822E7D25}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RCL.Core.Identity.Proofing.UI", "src\RCL.Core.Identity.Proofing.UI\RCL.Core.Identity.Proofing.UI.csproj", "{56607D98-5800-4C44-A39B-4624201A273A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RCL.Core.Identity.Proofing.UI", "src\RCL.Identity\RCL.Core.Identity.Proofing.UI\RCL.Core.Identity.Proofing.UI.csproj", "{56607D98-5800-4C44-A39B-4624201A273A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RCL.Core.Identity.Proofing.UI.Test", "test\RCL.Core.Identity.Proofing.UI.Test\RCL.Core.Identity.Proofing.UI.Test.csproj", "{C507F690-DB56-4D57-90C0-DF7499430EE2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RCL.Core.Identity.Proofing.UI.Test", "test\RCL.Identity\RCL.Core.Identity.Proofing.UI.Test\RCL.Core.Identity.Proofing.UI.Test.csproj", "{C507F690-DB56-4D57-90C0-DF7499430EE2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RCL.Core.Identity.Tools", "src\RCL.Core.Identity.Tools\RCL.Core.Identity.Tools.csproj", "{F36F6561-9967-4574-8E9D-B0AD00DD89E3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RCL.Core.Identity.Tools", "src\RCL.Identity\RCL.Core.Identity.Tools\RCL.Core.Identity.Tools.csproj", "{F36F6561-9967-4574-8E9D-B0AD00DD89E3}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RCL.Core.Identity.Tools.Test", "test\RCL.Core.Identity.Tools.Test\RCL.Core.Identity.Tools.Test.csproj", "{E0943AAC-7718-4A54-8FB4-265490536A20}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RCL.Core.Identity.Tools.Test", "test\RCL.Identity\RCL.Core.Identity.Tools.Test\RCL.Core.Identity.Tools.Test.csproj", "{E0943AAC-7718-4A54-8FB4-265490536A20}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B9867061-2DC5-4CD9-A280-D59DAF28B70F}"
 	ProjectSection(SolutionItems) = preProject

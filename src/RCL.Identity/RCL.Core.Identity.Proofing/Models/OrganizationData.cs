@@ -1,5 +1,4 @@
-﻿using System;
-#nullable disable
+﻿#nullable disable
 
 namespace RCL.Core.Identity.Proofing
 {
