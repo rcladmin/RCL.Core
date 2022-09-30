@@ -36,6 +36,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RCL.Core.Identity.Enrollment", "src\RCL.Identity\RCL.Core.Identity.Enrollment\RCL.Core.Identity.Enrollment.csproj", "{DF92C1A6-AA7E-4136-98C5-C49FA3B19C9C}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RCL.Identity.Proofing.Portal", "src\RCL.Identity\RCL.Core.Identity.Proofing.Portal\RCL.Identity.Proofing.Portal.csproj", "{E10DE37A-B288-4230-BE5C-98B79A1A28D1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -98,6 +100,10 @@ Global
 		{DF92C1A6-AA7E-4136-98C5-C49FA3B19C9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DF92C1A6-AA7E-4136-98C5-C49FA3B19C9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DF92C1A6-AA7E-4136-98C5-C49FA3B19C9C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E10DE37A-B288-4230-BE5C-98B79A1A28D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E10DE37A-B288-4230-BE5C-98B79A1A28D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E10DE37A-B288-4230-BE5C-98B79A1A28D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E10DE37A-B288-4230-BE5C-98B79A1A28D1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
