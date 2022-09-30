@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using RCL.Core.Identity.Tools;
 
-namespace RCL.Identity.Enrollment.Pages.Account
+namespace RCL.Core.Identity.Enrollment.Pages.Account
 {
     [Authorize]
     public class IndexModel : PageModel

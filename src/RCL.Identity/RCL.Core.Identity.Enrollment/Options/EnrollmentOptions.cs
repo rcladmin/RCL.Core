@@ -1,6 +1,6 @@
 ﻿# nullable disable
 
-namespace RCL.Identity.Enrollment
+namespace RCL.Core.Identity.Enrollment
 {
     public class EnrollmentOptions
     {

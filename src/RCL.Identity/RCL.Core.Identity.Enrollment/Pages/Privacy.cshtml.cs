@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace RCL.Identity.Enrollment.Pages
+namespace RCL.Core.Identity.Enrollment.Pages
 {
     public class PrivacyModel : PageModel
     {

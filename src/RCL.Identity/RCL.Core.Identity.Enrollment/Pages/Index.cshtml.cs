@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Options;
 
-namespace RCL.Identity.Enrollment.Pages
+namespace RCL.Core.Identity.Enrollment.Pages
 {
     [AllowAnonymous]
     public class IndexModel : PageModel

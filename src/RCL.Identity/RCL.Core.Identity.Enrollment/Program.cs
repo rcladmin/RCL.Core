@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Authentication.OpenIdConnect;
 using Microsoft.Identity.Web;
 using Microsoft.Identity.Web.UI;
-using RCL.Identity.Enrollment;
+using RCL.Core.Identity.Enrollment;
 
 var builder = WebApplication.CreateBuilder(args);
 
