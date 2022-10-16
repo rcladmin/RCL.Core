@@ -3,9 +3,9 @@
 	<PropertyGroup>
 		<TargetFramework>net6.0</TargetFramework>
 		<Version>7.0.0</Version>
-		<Authors>Anil Ripla</Authors>
+		<Authors>Ray Consulting Limited</Authors>
 		<Company>Ray Consulting Limited</Company>
-		<Description>A library to generate JWT Tokens to access RCL REST APIs</Description>
+		<Description>A library to generate JWT Tokens to access REST APIs</Description>
 		<RepositoryUrl>https://github.com/rcl-common/RCL.Core.Authorization</RepositoryUrl>
 		<PackageProjectUrl>https://github.com/rcl-common/RCL.Core.Authorization</PackageProjectUrl>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>

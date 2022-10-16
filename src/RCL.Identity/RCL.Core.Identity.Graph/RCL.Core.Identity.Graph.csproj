@@ -6,6 +6,9 @@
 		<Nullable>enable</Nullable>
 		<Title>RCL Core Identity Graph</Title>
 		<Description>A library to manage the AAD Graph</Description>
+		<Version>7.0.0</Version>
+		<Authors>Ray Consulting Limited</Authors>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 	</PropertyGroup>
 
 	<ItemGroup>

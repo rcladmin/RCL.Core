@@ -6,6 +6,9 @@
 		<Nullable>enable</Nullable>
 		<Title>RCL Core API Request Service</Title>
 		<Description>A library to make authorized requests to REST APIs</Description>
+		<Version>7.0.0</Version>
+		<Authors>Ray Consulting Limited</Authors>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 	</PropertyGroup>
 
 	<ItemGroup>

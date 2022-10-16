@@ -7,6 +7,9 @@
 		<Title>RCL Core Identity Tools</Title>
 		<Description>Tools for Identity in AAD</Description>
 		<PackageProjectUrl></PackageProjectUrl>
+		<Version>7.0.0</Version>
+		<Authors>Ray Consulting Limited</Authors>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 	</PropertyGroup>
 
 	<ItemGroup>

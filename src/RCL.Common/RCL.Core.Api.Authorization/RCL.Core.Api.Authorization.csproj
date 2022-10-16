@@ -6,6 +6,9 @@
 		<Nullable>enable</Nullable>
 		<Title>RCL Core API Authorization</Title>
 		<Description>A library to authorize a REST API in an Azure Function </Description>
+		<Version>7.0.0</Version>
+		<Authors>Ray Consulting Limited</Authors>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 	</PropertyGroup>
 
 	<ItemGroup>
