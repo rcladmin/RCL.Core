@@ -6,6 +6,10 @@
 		<Nullable>enable</Nullable>
 		<Title>RCL Core Identity Proofing</Title>
 		<Description>A library to manage RCL Identity Proofing</Description>
+		<PackageProjectUrl>https://github.com/rcladmin/RCL.Core/tree/master/src/RCL.Identity/RCL.Core.Identity.Proofing</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/rcladmin/RCL.Core/tree/master/src/RCL.Identity/RCL.Core.Identity.Proofing</RepositoryUrl>
+		<PackageIcon>images\icon.png</PackageIcon>
+		<Version>7.0.0</Version>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -14,6 +18,13 @@
 
 	<ItemGroup>
 	  <ProjectReference Include="..\..\RCL.Common\RCL.Core.Api.RequestService\RCL.Core.Api.RequestService.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Update="images\icon.png">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
 	</ItemGroup>
 
 </Project>

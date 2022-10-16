@@ -7,6 +7,10 @@
 		<AddRazorSupportForMvc>true</AddRazorSupportForMvc>
 		<Title>RCL Core Identity Proofing UI</Title>
 		<Description>A UI to manage user approval for RCL Identity Proofing</Description>
+		<PackageProjectUrl>https://github.com/rcladmin/RCL.Core/tree/master/src/RCL.Identity/RCL.Core.Identity.Proofing.UI</PackageProjectUrl>
+		<PackageIcon>images\icon.png</PackageIcon>
+		<RepositoryUrl>https://github.com/rcladmin/RCL.Core/tree/master/src/RCL.Identity/RCL.Core.Identity.Proofing.UI</RepositoryUrl>
+		<Version>7.0.0</Version>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -16,6 +20,13 @@
 	<ItemGroup>
 	  <ProjectReference Include="..\RCL.Core.Identity.Graph\RCL.Core.Identity.Graph.csproj" />
 	  <ProjectReference Include="..\RCL.Core.Identity.Proofing\RCL.Core.Identity.Proofing.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Update="images\icon.png">
+	    <PackagePath>\</PackagePath>
+	    <Pack>True</Pack>
+	  </None>
 	</ItemGroup>
 
 </Project>
