@@ -26,6 +26,12 @@ namespace RCL.Core.Identity.Tools
                 userClaimsData.DisplayName = displayName;
             }
 
+            string dob = User.Claims.FirstOrDefault(c => c.Type == "extension_DateofBirth")?.Value ?? string.Empty;
+            if (!string.IsNullOrEmpty(dob))
+            {
+                userClaimsData.DateOfBirth = DateTime.ParseExact(dob,"dd/MM/yyyy", null);
+            }
+
             string email = User.Claims.FirstOrDefault(c => c.Type == "emails")?.Value ?? string.Empty;
             if (!string.IsNullOrEmpty(email))
             {
@@ -60,6 +66,12 @@ namespace RCL.Core.Identity.Tools
             if (!string.IsNullOrEmpty(country))
             {
                 userClaimsData.Country = country;
+            }
+
+            string identityApprover = User.Claims.FirstOrDefault(c => c.Type == "extension_IdentityApprover")?.Value ?? string.Empty;
+            if (!string.IsNullOrEmpty(identityApprover))
+            {
+                userClaimsData.IdentityApprover = identityApprover;
             }
 
             string objectId = User.Claims.FirstOrDefault(c => c.Type == "http://schemas.microsoft.com/identity/claims/objectidentifier")?.Value ?? string.Empty;

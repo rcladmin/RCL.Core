@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Options;
 using RCL.Core.Identity.Graph;
+using System.Text.Json;
 
 namespace RCL.Core.Identity.Proofing.UI.Pages.UserApproval
 {
@@ -55,6 +56,8 @@ namespace RCL.Core.Identity.Proofing.UI.Pages.UserApproval
                 if (string.IsNullOrEmpty(UserData?.Email))
                 {
                     ErrorMessage = "The user was not found";
+
+                    return Page();
                 }
 
                 bool b = await IsUserDuplicateAsync(UserData);
@@ -62,6 +65,8 @@ namespace RCL.Core.Identity.Proofing.UI.Pages.UserApproval
                 if(b == true)
                 {
                     ErrorMessage = "A duplicate user exists with the same name and date of birth.";
+
+                    return Page();
                 }
 
                 Microsoft.Graph.User graphUser = UserConverter.ConvertToGraphUser(UserData);
@@ -81,6 +86,8 @@ namespace RCL.Core.Identity.Proofing.UI.Pages.UserApproval
                 else
                 {
                     ErrorMessage = "Could not create new user";
+
+                    return Page();
                 }
             }
             catch (Exception ex)
@@ -120,16 +127,17 @@ namespace RCL.Core.Identity.Proofing.UI.Pages.UserApproval
 
                         if (customAttributes?.Count > 0)
                         {
-                            string dateOfBirth = (string)customAttributes[$"extension_{userData.B2CExtensionAppId}_DateofBirth"];
+                            JsonElement dateOfBirth = (JsonElement)customAttributes[$"extension_{userData.B2CExtensionAppId}_DateofBirth"];
 
-                            if (!string.IsNullOrEmpty(dateOfBirth))
+                            if (!string.IsNullOrEmpty(dateOfBirth.GetString()))
                             {
-                                DateTime dob = DateTime.ParseExact(dateOfBirth, "dd/MM/yyyy", null);
+                                DateTime dob = DateTime.ParseExact(dateOfBirth.GetString(), "dd/MM/yyyy", null);
 
                                 if (dob == userData.DateOfBirth)
                                 {
                                     return true;
                                 }
+                                
                             }
                         }
                     }
@@ -139,6 +147,7 @@ namespace RCL.Core.Identity.Proofing.UI.Pages.UserApproval
             {
                 throw new Exception(ex.Message);
             }
+
             return b;
         }
 
