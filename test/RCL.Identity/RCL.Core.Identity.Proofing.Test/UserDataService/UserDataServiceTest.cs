@@ -4,7 +4,7 @@
     public class UserDataServiceTest
     {
         private readonly IUserDataService _userDataService;
-        private const string _subscrid = "xxx";
+        private const string _subscrid = "I-TKGDBEFH2AZM";
 
         public UserDataServiceTest()
         {
@@ -32,7 +32,7 @@
         {
             try
             {
-                List<UserData> userData = await _userDataService.GetUserDataBySubscriptionAsync(_subscrid);
+                List<UserData> userData = await _userDataService.GetUserDataByIdentityApproverAsync(_subscrid,"Contoso");
                 Assert.AreNotEqual(0, userData?.Count);
             }
             catch (Exception ex)

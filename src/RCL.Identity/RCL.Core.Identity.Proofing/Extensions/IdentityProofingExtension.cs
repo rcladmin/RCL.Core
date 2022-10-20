@@ -8,7 +8,7 @@ namespace RCL.Core.Identity.Proofing
             Action<IdentityProofingApiOptions> setupApiAction)
         {
             services.AddTransient<IUserDataService, UserDataSevice>();
-            services.AddTransient<IOrganizationDataService, OrganizationDataService>();
+            services.AddTransient<IIdentityApproverService, IdentityApproverService>();
 
             services.Configure(setupApiAction);
             

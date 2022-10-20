@@ -33,6 +33,15 @@ namespace RCL.Core.Identity.Graph
                 .Request()
                 .AddAsync(user);
 
+                OpenTypeExtension extension = new OpenTypeExtension
+                {
+                    ExtensionName = "DigitalIdentity-Custom-Extensions",
+                    AdditionalData = user.AdditionalData
+                };
+
+                await _graphClient.Users[createdUser.Id].Extensions.Request()
+                    .AddAsync(extension);
+
                 return createdUser;
             }
             catch (Exception ex)
@@ -59,9 +68,13 @@ namespace RCL.Core.Identity.Graph
                         e.Country,
                         e.UserPrincipalName,
                         e.DisplayName,
-                        e.Id
+                        e.Id,
+                        e.AdditionalData
                     })
                     .GetAsync();
+
+                var extensions = await _graphClient.Users[user.Id].Extensions.Request().GetAsync();
+                user.Extensions = extensions;
 
                 return user;
             }
@@ -89,11 +102,61 @@ namespace RCL.Core.Identity.Graph
                         e.Country,
                         e.UserPrincipalName,
                         e.DisplayName,
-                        e.Id
+                        e.Id,
+                        e.AdditionalData
                     })
                     .GetAsync();
 
+                var extensions = await _graphClient.Users[user.Id].Extensions.Request().GetAsync();
+                user.Extensions = extensions;
+
                 return user;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        public async Task<List<User>> GetUsersByNameAsync(string givenName, string surname)
+        {
+            try
+            {
+                GetGraphServiceClient();
+
+                List<User> users = new List<User>();
+
+                var page = await _graphClient.Users
+                    .Request()
+                    .Filter($"GivenName eq '{givenName}' and Surname eq '{surname}'")
+                    .Select(e => new
+                    {
+                        e.GivenName,
+                        e.Surname,
+                        e.StreetAddress,
+                        e.City,
+                        e.State,
+                        e.PostalCode,
+                        e.Country,
+                        e.UserPrincipalName,
+                        e.DisplayName,
+                        e.Id,
+                        e.AdditionalData
+                    })
+                    .GetAsync();
+
+                if(page.ToList().Count > 0)
+                {
+                    foreach(var user in page.ToList())
+                    {
+                        var extensions = await _graphClient.Users[user.Id].Extensions.Request().GetAsync();
+                        user.Extensions = extensions;
+
+                        users.Add(user);
+                    }
+                }
+
+                return users;
             }
             catch (Exception ex)
             {
@@ -131,6 +194,30 @@ namespace RCL.Core.Identity.Graph
             {
                 throw new Exception(ex.Message);
             }
+        }
+
+        public Dictionary<string,object> GetUserCustomAttributes(User user)
+        {
+            Dictionary<string, object> customAttributes = new Dictionary<string, object>();
+
+            try
+            {
+                if(user?.Extensions?.CurrentPage?.Count > 0)
+                {
+                    var extension = user.Extensions.CurrentPage.FirstOrDefault();
+                  
+                    if(extension?.AdditionalData?.Count > 0)
+                    {
+                        customAttributes = (Dictionary<string, object>)extension.AdditionalData;
+                    }
+                }
+            }
+            catch(Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
+            return customAttributes;
         }
 
         public async Task DeleteUserByObjectIdAsync(string objectId)

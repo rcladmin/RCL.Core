@@ -2,12 +2,13 @@
 
 namespace RCL.Core.Identity.Proofing
 {
-    public class OrganizationData
+    public class IdentityApprover
     {
         public int Id { get; set; }
         public int SubscriptionId { get; set; }
-        public string OrganizationName { get; set; }
-        public string ApproverEmail { get; set; }
+        public string Name { get; set; }
+        public string Identifier { get; set; }
+        public string Email { get; set; }
         public string EnrollmentInstructionsUrl { get; set; }
         public string EnrollmentUrl { get; set; }
     }

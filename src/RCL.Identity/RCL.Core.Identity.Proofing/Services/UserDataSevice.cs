@@ -30,9 +30,9 @@ namespace RCL.Core.Identity.Proofing
             return _userData;
         }
 
-        public async Task<List<UserData>> GetUserDataBySubscriptionAsync(string subscrid)
+        public async Task<List<UserData>> GetUserDataByIdentityApproverAsync(string subscrid, string identityApproverIdentifier)
         {
-            string uri = $"{_options.Value.ApiEndpoint}/v1/did/userdata/subscriptionid/{subscrid}/getall";
+            string uri = $"{_options.Value.ApiEndpoint}/v1/did/userdata/subscriptionid/{subscrid}/identityapproveridentifier/{identityApproverIdentifier}/get";
 
             List<UserData> _userDatas = await GetListResultAsync<UserData>(uri, _options.Value.Resource);
 

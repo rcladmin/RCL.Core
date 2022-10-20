@@ -38,6 +38,9 @@ namespace RCL.Core.Identity.Proofing
                 },
                 PasswordPolicies = "DisablePasswordExpiration",
             };
+            user.AdditionalData = new Dictionary<string, object>();
+            user.AdditionalData.Add($"extension_{userData.B2CExtensionAppId}_DateofBirth", userData.DateOfBirth.ToString("dd/MM/yyyy"));
+            user.AdditionalData.Add($"extension_{userData.B2CExtensionAppId}_IdentityApprover", userData.IdentityApprover);
 
             return user;
         }

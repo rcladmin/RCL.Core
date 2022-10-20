@@ -25,7 +25,7 @@ namespace RCL.Core.Identity.Proofing.UI.Pages.UserApproval
         {
             try
             {
-                Users = await _userDataService.GetUserDataBySubscriptionAsync(_options.Value.SubscriptionId);
+                Users = await _userDataService.GetUserDataByIdentityApproverAsync(_options.Value.SubscriptionId, _options.Value.IdentityApproverIdentifier);
             }
             catch(Exception ex)
             {

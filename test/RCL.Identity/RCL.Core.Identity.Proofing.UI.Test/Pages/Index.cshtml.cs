@@ -16,7 +16,7 @@ namespace RCL.Core.Identity.Proofing.UI.Test.Pages
             var claims = User.Claims;
             int x = claims.Count();
 
-            return RedirectToPage("/UserApproval/Index", new { area = "IdentityProofing" });
+            return RedirectToPage("/IdentityApprover/Details", new { area = "IdentityProofing" });
         }
     }
 }

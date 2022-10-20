@@ -13,11 +13,14 @@ namespace RCL.Core.Identity.Proofing
         public string GivenName { get; set; }
         public string SurName { get; set; }
         public string DisplayName { get; set; }
+        public DateTime DateOfBirth { get; set; }
         public string StreetAddress { get; set; }
         public string City { get; set; }
         public string StateProvince { get; set; }
         public string PostalCode { get; set; }
         public string Country { get; set; }
+        public string IdentityApprover { get; set; }
+        public string B2CExtensionAppId { get; set; }
         public string ApprovalStatus { get; set; }
         public string InputData { get; set; }
         public string TemporaryPassword { get; set; }

@@ -57,6 +57,13 @@ namespace RCL.Core.Identity.Proofing.UI.Pages.UserApproval
                     ErrorMessage = "The user was not found";
                 }
 
+                bool b = await IsUserDuplicateAsync(UserData);
+
+                if(b == true)
+                {
+                    ErrorMessage = "A duplicate user exists with the same name and date of birth.";
+                }
+
                 Microsoft.Graph.User graphUser = UserConverter.ConvertToGraphUser(UserData);
 
                 Microsoft.Graph.User newUser = await CreateGraphUserAsync(graphUser);
@@ -95,6 +102,44 @@ namespace RCL.Core.Identity.Proofing.UI.Pages.UserApproval
             {
                 throw new Exception(ex.Message);
             }
+        }
+
+        private async Task<bool> IsUserDuplicateAsync(UserData userData)
+        {
+            bool b = false;
+
+            try
+            {
+                List<Microsoft.Graph.User> users = await _graphService.GetUsersByNameAsync(userData.GivenName, userData.SurName);
+
+                if(users.Count > 0)
+                {
+                    foreach(var user in users)
+                    {
+                        Dictionary<string, object> customAttributes = _graphService.GetUserCustomAttributes(user);
+
+                        if (customAttributes?.Count > 0)
+                        {
+                            string dateOfBirth = (string)customAttributes[$"extension_{userData.B2CExtensionAppId}_DateofBirth"];
+
+                            if (!string.IsNullOrEmpty(dateOfBirth))
+                            {
+                                DateTime dob = DateTime.ParseExact(dateOfBirth, "dd/MM/yyyy", null);
+
+                                if (dob == userData.DateOfBirth)
+                                {
+                                    return true;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            catch(Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return b;
         }
 
         private async Task<Microsoft.Graph.User> CreateGraphUserAsync(Microsoft.Graph.User user)

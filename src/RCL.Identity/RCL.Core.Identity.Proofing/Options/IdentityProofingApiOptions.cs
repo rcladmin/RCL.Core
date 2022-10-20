@@ -7,5 +7,6 @@ namespace RCL.Core.Identity.Proofing
         public string ApiEndpoint { get; set; }
         public string Resource { get; set; }
         public string SubscriptionId { get; set; }
+        public string IdentityApproverIdentifier { get; set; }
     }
 }

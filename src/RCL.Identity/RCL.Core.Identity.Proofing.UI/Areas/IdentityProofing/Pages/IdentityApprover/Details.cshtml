@@ -1,0 +1,34 @@
+﻿@page
+@model RCL.Core.Identity.Proofing.UI.Areas.IdentityProofing.Pages.IdentityApprover.DetailsModel
+@{
+    ViewData["Title"] = "Identity Approver";
+}
+
+<div class="card shadow rounded mt-2 mb-5">
+    <div class="card-header">
+        <h3>@ViewData["Title"]</h3>
+    </div>
+    <div class="card-body">
+        @if (!string.IsNullOrEmpty(Model?.ErrorMessage))
+        {
+            <div class="alert alert-danger">
+                <p>@Model.ErrorMessage</p>
+            </div>
+        }
+        else
+        {
+            <div><strong>Name</strong></div>
+            <div>@Html.DisplayFor(model => model.IdentityApprover.Name)</div>
+            <div><strong>Email</strong></div>
+            <div>@Html.DisplayFor(model => model.IdentityApprover.Email)</div>
+            <div><strong>Identifier</strong></div>
+            <div>@Html.DisplayFor(model => model.IdentityApprover.Identifier)</div>
+            <div><strong>Enrollment URL</strong></div>
+            <div>@Html.DisplayFor(model => model.IdentityApprover.EnrollmentUrl)</div>
+            <div><strong>Enrollment Instructions URL</strong></div>
+            <div>@Html.DisplayFor(model => model.IdentityApprover.EnrollmentInstructionsUrl)</div>
+        }
+    </div>
+</div>
+
+

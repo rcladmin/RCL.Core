@@ -6,7 +6,7 @@ using RCL.Core.Identity.Tools;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddRCLCoreAuthTokenServices(options => builder.Configuration.Bind("Auth", options));
+builder.Services.AddRCLCoreAuthTokenServices(options => builder.Configuration.Bind("AzureAd", options));
 builder.Services.AddRCLCoreIdentityGraphServices();
 builder.Services.AddRCLCoreIdentitySecurityGroupServices();
 
