@@ -71,7 +71,7 @@ namespace RCL.Core.Identity.Graph.Test
         {
             try
             {
-                Microsoft.Graph.User user = await _graphService.GetUserByObjectIdAsync("b5edeb18-83ec-4849-bef6-e4b057944c6e");
+                Microsoft.Graph.User user = await _graphService.GetUserByObjectIdAsync("828e3b2a-026d-4582-ace9-2effd512e5b2");
 
                 Assert.AreNotEqual(string.Empty, user?.Id ?? String.Empty);
             }

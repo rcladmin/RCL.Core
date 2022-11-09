@@ -17,6 +17,12 @@
         }
         else
         {
+            @if (!string.IsNullOrEmpty(Model?.UserData?.PhotoUrl))
+            {
+                <div class="mb-3">
+                    <img height="150" src="@Model?.UserData.PhotoUrl">
+                </div>
+            }
             <div><strong>First Name</strong></div>
             <div>@Html.DisplayFor(model => model.UserData.GivenName)</div>
             <div><strong>Last Name</strong></div>

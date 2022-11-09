@@ -3,13 +3,9 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace RCL.Core.Identity.Tools.Test.Pages
 {
-    [Authorize]
+    [AllowAnonymous]
     public class IndexModel : PageModel
     {
-        public IndexModel()
-        {
-        }
-
         public void OnGet()
         {
         }

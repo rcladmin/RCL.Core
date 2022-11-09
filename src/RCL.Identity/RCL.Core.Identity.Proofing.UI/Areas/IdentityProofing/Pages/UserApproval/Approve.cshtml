@@ -20,20 +20,27 @@
             <div class="alert alert-info">
                 <i class="bi bi-info-circle"></i> Please ensure you have physically verified the identity of the applicant before you approve the request.
             </div>
-            <h4>Do you want to approve this sign-up request ?</h4>
+            <h4>Do you want to approve this request ?</h4>
+            @if (!string.IsNullOrEmpty(Model?.UserData?.PhotoUrl))
+            {
+                <div class="mb-3">
+                    <img height="90" src="@Model?.UserData.PhotoUrl">
+                </div>
+            }
             <div><strong>First Name</strong></div>
             <div>@Html.DisplayFor(model => model.UserData.GivenName)</div>
             <div><strong>Last Name</strong></div>
             <div>@Html.DisplayFor(model => model.UserData.SurName)</div>
             <div><strong>Email</strong></div>
             <div>@Html.DisplayFor(model => model.UserData.Email)</div>
-        }
-    </div>
-    <div class="card-footer">
-        <form method="post" id="frm_submit" asp-route-id="@Model?.UserData.Id">
-            <div class="form-group">
-                <input type="submit" value="Approve" class="btn btn-primary link_click" /> <a asp-page="./Index" class="btn btn-secondary link_click">Cancel</a>
+            
+            <div class="mt-2">
+            <form method="post" id="frm_submit" asp-route-id="@Model?.UserData.Id">
+                <div class="form-group">
+                    <input type="submit" value="Approve" class="btn btn-primary link_click" /> <a asp-page="./Index" class="btn btn-secondary link_click">Cancel</a>
+                </div>
+            </form>
             </div>
-        </form>
+        }
     </div>
 </div>

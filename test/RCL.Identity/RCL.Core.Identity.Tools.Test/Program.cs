@@ -8,7 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddAuthentication(OpenIdConnectDefaults.AuthenticationScheme)
     .AddMicrosoftIdentityWebApp(builder.Configuration.GetSection("AzureAd"));
 
-builder.Services.AddRCLCoreAuthTokenServices(options => builder.Configuration.Bind("Auth", options));
+builder.Services.AddRCLCoreAuthTokenServices(options => builder.Configuration.Bind("AzureAd", options));
 builder.Services.AddRCLCoreIdentityGraphServices();
 builder.Services.AddRCLCoreIdentitySecurityGroupServices();
 

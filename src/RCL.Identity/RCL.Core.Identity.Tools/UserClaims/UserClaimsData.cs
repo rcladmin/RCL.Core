@@ -16,5 +16,7 @@ namespace RCL.Core.Identity.Tools
         public string Country { get; set; }
         public string IdentityApprover { get; set; }
         public string ObjectId { get; set; }
+        public string PhotoUrl { get; set; }
+        public DateTime DateCreated { get; set; }
     }
 }

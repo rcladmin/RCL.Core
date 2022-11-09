@@ -39,6 +39,16 @@ namespace RCL.Core.Identity.Proofing
             return _userDatas;
         }
 
+        public async Task<UserData> UpdateUserDataAsync(string subscrid, int id, UserData userData)
+        {
+            string uri = $"{_options.Value.ApiEndpoint}/v1/did/userdata/subscriptionid/{subscrid}/id/{id}/update";
+
+            UserData _userData = await PutAsync<UserData,UserData>(uri, _options.Value.Resource,userData);
+
+            return _userData;
+
+        }
+
         public async Task DeleteUserDataAsync(string subscrid, int id)
         {
             string uri = $"{_options.Value.ApiEndpoint}/v1/did/userdata/subscriptionid/{subscrid}/id/{id}/delete";

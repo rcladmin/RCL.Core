@@ -80,6 +80,18 @@ namespace RCL.Core.Identity.Tools
                 userClaimsData.ObjectId = objectId;
             }
 
+            string photoURL = User.Claims.FirstOrDefault(c => c.Type == "extension_PhotoUrl")?.Value ?? string.Empty;
+            if (!string.IsNullOrEmpty(photoURL))
+            {
+                userClaimsData.PhotoUrl = photoURL;
+            }
+
+            string dateCreated = User.Claims.FirstOrDefault(c => c.Type == "extension_DateCreated")?.Value ?? string.Empty;
+            if (!string.IsNullOrEmpty(dateCreated))
+            {
+                userClaimsData.DateCreated = DateTime.ParseExact(dateCreated, "dd/MM/yyyy", null);
+            }
+
             return userClaimsData;
         }
     }

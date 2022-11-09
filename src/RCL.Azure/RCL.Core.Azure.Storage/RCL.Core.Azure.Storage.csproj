@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Version>7.0.0</Version>
+    <Authors>Ray Consulting Limited</Authors>
+    <Company>Ray Consulting Limited</Company>
+    <Description>A library to manage Azure Storage resources</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+	  	<PackageIcon>images\icon.png</PackageIcon>	  
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Azure.Storage.Blobs" />
+    <PackageReference Include="Microsoft.Extensions.Options" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="images\icon.png">
+      <PackagePath>\</PackagePath>
+      <Pack>True</Pack>
+    </None>
+  </ItemGroup>
+
+</Project>

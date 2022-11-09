@@ -1,0 +1,72 @@
+﻿@page
+@model RCL.Core.Identity.Proofing.UI.Areas.IdentityProofing.Pages.UserApproval.PhotoModel
+@{
+    ViewData["Title"] = "User Photo";
+}
+
+<div class="card shadow rounded mt-2 mb-5">
+    <div class="card-header">
+        <h3><a class="link_click" asp-page="./index"><i class="bi-arrow-left-circle"></i></a> @ViewData["Title"]</h3>
+    </div>
+    <div class="card-body">
+        @if (!string.IsNullOrEmpty(Model?.ErrorMessage))
+        {
+            <div class="alert alert-danger">
+                <p>@Model.ErrorMessage</p>
+            </div>
+        }
+        else
+        {
+            @if (!string.IsNullOrEmpty(Model?.UserData?.PhotoUrl))
+            {
+                <div class="mb-3">
+                    <img height="90" src="@Model?.UserData.PhotoUrl">
+                </div>
+            }
+            <div><strong>First Name</strong></div>
+            <div>@Html.DisplayFor(model => model.UserData.GivenName)</div>
+            <div><strong>Last Name</strong></div>
+            <div>@Html.DisplayFor(model => model.UserData.SurName)</div>
+            <div><strong>Date of Birth</strong></div>
+            <div>@Html.DisplayFor(model => model.UserData.DateOfBirth)</div>
+
+            <form enctype="multipart/form-data" method="post" id="frm_submit">
+                <input type="hidden" asp-for="UserData.Id" value="@Model?.UserData?.Id" />
+                <input type="hidden" asp-for="UserData.SubscriptionId" value="@Model?.UserData?.SubscriptionId" />
+                <input type="hidden" asp-for="UserData.DateCreated" value="@Model?.UserData?.DateCreated" />
+                <input type="hidden" asp-for="UserData.Email" value="@Model?.UserData?.Email" />
+                <input type="hidden" asp-for="UserData.GivenName" value="@Model?.UserData?.GivenName" />
+                <input type="hidden" asp-for="UserData.SurName" value="@Model?.UserData?.SurName" />
+                <input type="hidden" asp-for="UserData.DisplayName" value="@Model?.UserData?.DisplayName" />
+                <input type="hidden" asp-for="UserData.DateOfBirth" value="@Model?.UserData?.DateOfBirth" />
+                <input type="hidden" asp-for="UserData.StreetAddress" value="@Model?.UserData?.StreetAddress" />
+                <input type="hidden" asp-for="UserData.City" value="@Model?.UserData?.City" />
+                <input type="hidden" asp-for="UserData.StateProvince" value="@Model?.UserData?.StateProvince" />
+                <input type="hidden" asp-for="UserData.PostalCode" value="@Model?.UserData?.PostalCode" />
+                <input type="hidden" asp-for="UserData.Country" value="@Model?.UserData?.Country" />
+                <input type="hidden" asp-for="UserData.IdentityApprover" value="@Model?.UserData?.IdentityApprover" />
+                <input type="hidden" asp-for="UserData.B2CExtensionAppId" value="@Model?.UserData?.B2CExtensionAppId" />
+                <input type="hidden" asp-for="UserData.PhotoUrl" value="@Model?.UserData?.PhotoUrl" />
+                <input type="hidden" asp-for="UserData.ApprovalStatus" value="@Model?.UserData?.ApprovalStatus" />
+                <input type="hidden" asp-for="UserData.InputData" value="@Model?.UserData?.InputData" />
+                <input type="hidden" asp-for="UserData.TemporaryPassword" value="@Model?.UserData?.TemporaryPassword" />
+                <input type="hidden" asp-for="UserData.UserPrincipalName" value="@Model?.UserData?.UserPrincipalName" />
+                <input type="hidden" asp-for="UserData.ObjectId" value="@Model?.UserData?.ObjectId" />
+                <div class="form-group mt-4 mb-4">
+                    <label class="control-label">User Photo</label>
+                    <input required type="file" name="filePhotoUrl" asp-for="UserData.PhotoUrl" class="form-control" />
+                    <div><small>Only jpg, jpeg, png, gif, bmp, svg image files are allowed</small></div>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Submit" class="btn btn-primary" /> <a asp-page="./Index" class="btn btn-secondary link_click">Cancel</a>
+                </div>
+            </form>
+        }
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    }

@@ -1,0 +1,82 @@
+﻿@page
+@model RCL.Core.Identity.Tools.Test.Pages.ClaimsPageModel
+@{
+    ViewData["Title"] = "User Claims";
+}
+
+<div class="card shadow rounded">
+    <div class="card-header"><h3><i class="bi bi-person"></i> @ViewData["Title"]</h3></div>
+    <div class="card-body">
+        @if (!string.IsNullOrEmpty(Model?.UserData?.PhotoUrl))
+        {
+            <div class="mt-2 mb-2">
+                <img height="100" src="@Model?.UserData?.PhotoUrl">
+            </div>
+        }
+        @if (!string.IsNullOrEmpty(Model?.UserData?.GivenName))
+        {
+            <div><strong>First Name</strong></div>
+            <div>@Html.DisplayFor(model => model.UserData.GivenName)</div>
+        }
+        @if (!string.IsNullOrEmpty(Model?.UserData?.SurName))
+        {
+            <div><strong>Last Name</strong></div>
+            <div>@Html.DisplayFor(model => model.UserData.SurName)</div>
+        }
+        @if (!string.IsNullOrEmpty(Model?.UserData?.DisplayName))
+        {
+            <div><strong>Display Name</strong></div>
+            <div>@Html.DisplayFor(model => model.UserData.DisplayName)</div>
+        }
+        @if (Model?.UserData.DateOfBirth.ToShortDateString() != "1/1/0001")
+        {
+            <div><strong>Date of Birth</strong></div>
+            <div>@Model?.UserData.DateOfBirth.ToLongDateString()</div>
+        }
+        @if (!string.IsNullOrEmpty(Model?.UserData?.Email))
+        {
+            <div><strong>Email</strong></div>
+            <div>@Html.DisplayFor(model => model.UserData.Email)</div>
+        }
+        @if (!string.IsNullOrEmpty(Model?.UserData?.StreetAddress))
+        {
+            <div><strong>Street Address</strong></div>
+            <div>@Html.DisplayFor(model => model.UserData.StreetAddress)</div>
+        }
+        @if (!string.IsNullOrEmpty(Model?.UserData?.City))
+        {
+            <div><strong>City</strong></div>
+            <div>@Html.DisplayFor(model => model.UserData.City)</div>
+        }
+        @if (!string.IsNullOrEmpty(Model?.UserData?.State))
+        {
+            <div><strong>State/Province</strong></div>
+            <div>@Html.DisplayFor(model => model.UserData.State)</div>
+        }
+        @if (!string.IsNullOrEmpty(Model?.UserData?.PostalCode))
+        {
+            <div><strong>Postal Code</strong></div>
+            <div>@Html.DisplayFor(model => model.UserData.PostalCode)</div>
+        }
+        @if (!string.IsNullOrEmpty(Model?.UserData?.Country))
+        {
+            <div><strong>Country</strong></div>
+            <div>@Html.DisplayFor(model => model.UserData.Country)</div>
+        }
+        @if (!string.IsNullOrEmpty(Model?.UserData?.IdentityApprover))
+        {
+            <div><strong>Identity Approver</strong></div>
+            <div>@Html.DisplayFor(model => model.UserData.IdentityApprover)</div>
+        }
+        @if (!string.IsNullOrEmpty(Model?.UserData?.ObjectId))
+        {
+            <div><strong>Id</strong></div>
+            <div>@Html.DisplayFor(model => model.UserData.ObjectId)</div>
+        }
+        @if (Model?.UserData.DateCreated.ToShortDateString() != "1/1/0001")
+        {
+            <div><strong>Date Created</strong></div>
+            <div>@Model?.UserData.DateCreated.ToLongDateString()</div>
+        }
+    </div>
+</div>

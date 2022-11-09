@@ -20,6 +20,7 @@ namespace RCL.Core.Identity.Proofing
         public string PostalCode { get; set; }
         public string Country { get; set; }
         public string IdentityApprover { get; set; }
+        public string PhotoUrl { get; set; }
         public string B2CExtensionAppId { get; set; }
         public string ApprovalStatus { get; set; }
         public string InputData { get; set; }

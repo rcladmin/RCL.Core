@@ -17,11 +17,6 @@ namespace RCL.Core.Identity.Proofing
                 GivenName = userData.GivenName,
                 Surname = userData.SurName,
                 DisplayName = userData.DisplayName,
-                StreetAddress = userData.StreetAddress,
-                City = userData.City,
-                State = userData.StateProvince,
-                PostalCode = userData.PostalCode,
-                Country = userData.Country,
                 Identities = new List<ObjectIdentity>()
                 {
                     new ObjectIdentity
@@ -36,12 +31,40 @@ namespace RCL.Core.Identity.Proofing
                     Password = PasswordHelper.GenerateNewPassword(4, 8, 4),
                     ForceChangePasswordNextSignIn = true
                 },
+
                 PasswordPolicies = "DisablePasswordExpiration",
             };
+
+            if(!string.IsNullOrEmpty(userData?.StreetAddress))
+            {
+                user.StreetAddress = userData.StreetAddress;
+            }
+            if (!string.IsNullOrEmpty(userData?.City))
+            {
+                user.City = userData.City;
+            }
+            if (!string.IsNullOrEmpty(userData?.StateProvince))
+            {
+                user.State = userData.StateProvince;
+            }
+            if (!string.IsNullOrEmpty(userData?.PostalCode))
+            {
+                user.PostalCode = userData.PostalCode;
+            }
+            if (!string.IsNullOrEmpty(userData?.Country))
+            {
+                user.Country = userData.Country;
+            }
+
             user.AdditionalData = new Dictionary<string, object>();
             user.AdditionalData.Add($"extension_{userData.B2CExtensionAppId}_DateofBirth", userData.DateOfBirth.ToString("dd/MM/yyyy"));
+            user.AdditionalData.Add($"extension_{userData.B2CExtensionAppId}_DateCreated", userData.DateCreated.ToString("dd/MM/yyyy"));
             user.AdditionalData.Add($"extension_{userData.B2CExtensionAppId}_IdentityApprover", userData.IdentityApprover);
 
+            if(!string.IsNullOrEmpty(userData?.PhotoUrl))
+            {
+                user.AdditionalData.Add($"extension_{userData.B2CExtensionAppId}_PhotoUrl", userData.PhotoUrl);
+            }
             return user;
         }
     }

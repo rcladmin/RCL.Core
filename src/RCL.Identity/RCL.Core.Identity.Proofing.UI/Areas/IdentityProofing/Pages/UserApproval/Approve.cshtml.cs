@@ -38,6 +38,12 @@ namespace RCL.Core.Identity.Proofing.UI.Pages.UserApproval
                 {
                     ErrorMessage = "The user was not found";
                 }
+
+                if(string.IsNullOrEmpty(UserData?.PhotoUrl))
+                {
+                    ErrorMessage = "Add a user photo before you approve this user";
+                    return Page();
+                }
             }
             catch (Exception ex)
             {

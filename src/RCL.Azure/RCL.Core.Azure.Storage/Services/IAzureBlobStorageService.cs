@@ -1,0 +1,27 @@
+﻿using Azure.Storage.Blobs;
+using System.IO;
+using System.Threading.Tasks;
+
+namespace RCL.Core.Azure.Storage
+{
+    public interface IAzureBlobStorageService
+    {
+        Task<BlobContainerClient> CreateOrGetContainerAsync(string ContainerName, ContainerType ContainerType);
+        
+        Task<int> DeleteContainerAsync(string ContainerName);
+
+        Task<BlobClient> UploadBlobAsync(string ContainerName,
+              ContainerType ContainerType, string BlobName,
+              Stream Stream, string ContentType);
+
+        string GetBlobSasUri(string ContainerName, string BlobName);
+
+        Task<MemoryStream> DownloadBlobToStreamAsync(string ContainerName, string BlobName);
+
+        Task<string> ReadTextFromBlobAsync(string ContainerName, string BlobName);
+
+        Task WriteTextToBlobAsync(string ContainerName, ContainerType ContainerType, string BlobName, string Content);
+
+        Task<int> DeleteBlobAsync(string ContainerName, string BlobName);
+    }
+}
