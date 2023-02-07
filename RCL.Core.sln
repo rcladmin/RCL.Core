@@ -3,16 +3,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RCL.Core.Azure.BlobStorage", "src\RCL.Core.Azure.BlobStorage\RCL.Core.Azure.BlobStorage\RCL.Core.Azure.BlobStorage.csproj", "{ADF9E2CB-CEB1-472B-BBA9-B25EF8AE0393}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0BD4FB9A-1A69-4C3F-817F-D2BBD52FB3E7}"
 	ProjectSection(SolutionItems) = preProject
 		Directory.Packages.props = Directory.Packages.props
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RCL.Core.Identity.Graph", "src\RCL.Core.Identity.Graph\RCL.Core.Identity.Graph.csproj", "{F2018FC9-C66D-420E-87E0-6E15CC88F41E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RCL.Core.Identity.Graph", "src\RCL.Core.Identity.Graph\RCL.Core.Identity.Graph.csproj", "{F2018FC9-C66D-420E-87E0-6E15CC88F41E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RCL.Core.Identity.Tools", "src\RCL.Core.Identity.Tools\RCL.Core.Identity.Tools.csproj", "{7B77252E-7C15-4AB8-940D-AACBCC9B31D5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RCL.Core.Identity.Tools", "src\RCL.Core.Identity.Tools\RCL.Core.Identity.Tools.csproj", "{7B77252E-7C15-4AB8-940D-AACBCC9B31D5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RCL.Core.Azure.BlobStorage", "src\RCL.Core.Azure.BlobStorage\RCL.Core.Azure.BlobStorage.csproj", "{A0CDACA3-CC60-4D9A-8156-916D6BF18CD5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,10 +20,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{ADF9E2CB-CEB1-472B-BBA9-B25EF8AE0393}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{ADF9E2CB-CEB1-472B-BBA9-B25EF8AE0393}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{ADF9E2CB-CEB1-472B-BBA9-B25EF8AE0393}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{ADF9E2CB-CEB1-472B-BBA9-B25EF8AE0393}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F2018FC9-C66D-420E-87E0-6E15CC88F41E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F2018FC9-C66D-420E-87E0-6E15CC88F41E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F2018FC9-C66D-420E-87E0-6E15CC88F41E}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -32,6 +28,10 @@ Global
 		{7B77252E-7C15-4AB8-940D-AACBCC9B31D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7B77252E-7C15-4AB8-940D-AACBCC9B31D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7B77252E-7C15-4AB8-940D-AACBCC9B31D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0CDACA3-CC60-4D9A-8156-916D6BF18CD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0CDACA3-CC60-4D9A-8156-916D6BF18CD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0CDACA3-CC60-4D9A-8156-916D6BF18CD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0CDACA3-CC60-4D9A-8156-916D6BF18CD5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
